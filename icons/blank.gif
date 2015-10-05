@@ -1,0 +1,30 @@
+
+<pre>
+Mod_python error: "PythonHandler django.core.handlers.modpython"
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python2.4/site-packages/mod_python/apache.py", line 299, in HandlerDispatch
+    result = object(req)
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/core/handlers/modpython.py", line 165, in handler
+    return ModPythonHandler()(req)
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/core/handlers/modpython.py", line 139, in __call__
+    response = self.get_response(req.uri, request)
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/core/handlers/base.py", line 95, in get_response
+    return callback(request, **param_dict)
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/views/defaults.py", line 58, in page_not_found
+    t = loader.get_template(template_name)
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/core/template/loader.py", line 73, in get_template
+    return get_template_from_string(*find_template_source(template_name))
+
+  File "/usr/lib/python2.4/site-packages/Django-0.91-py2.4.egg/django/core/template/loader.py", line 66, in find_template_source
+    raise TemplateDoesNotExist, name
+
+TemplateDoesNotExist: 404
+
+</pre>
